@@ -33,7 +33,7 @@
       </tr>
       </table>
     **********/
-      echo "<table>".PHP_EOL;
+      echo <div class="results">"<table>".PHP_EOL;
           while ($row = $results->fetch_assoc()){
             echo "<tr><td>{$row['artist']}</td><td>{$row['title']}</td><td>{$row['id']}</td></td></tr>".PHP_EOL;
           }
@@ -44,16 +44,6 @@
       //shows updates
       echo "<br>".'Total of rows updated: ' . $conn->affected_rows;
     }
-
-    //deze code toepassen zodat de echo de tables gebruikt
-    /*  if ($result->num_rows > 0) {
-            echo "<div class='tablehoofd'><h2><tr><td>num</td>&emsp;&emsp;<td>naam</td>&emsp;&emsp;<td>achter_naam</td>
-            &emsp;&emsp;<td>geboortedatum</td>&emsp;&emsp;&emsp;&emsp;<td>leeftijd</td></h2></div>"; /*echo de top rij met opties
-
-            while($row = $result->fetch_assoc()) {
-              echo "<div class='table'>".$row['num']."<div class='locatie'>".$row['naam']."</div><div class='locatie2'>".$row['achter']."</div>
-              <div class='locatie3'>".$row['geboortedatum']."</div><div class='locatie4'>".$row['age']."</div></div>";
-            } */
 
     ?>
 </body>

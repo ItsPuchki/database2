@@ -2,3 +2,8 @@ body {
   color: white;
   background-color: black;
 }
+
+div.results {
+  text-align: center;
+  
+}
