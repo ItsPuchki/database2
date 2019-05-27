@@ -16,6 +16,8 @@
       <input type="text" name="title" placeholder="type here">
       <button type="submit" name="submit">Submit</button>
     </form>
+    <br>
+    <br>
 
     <?php
     include_once 'connect.php' ;
@@ -24,10 +26,19 @@
     $results = $conn->query($sql);
     //pakt een record en maakt er een associatief array van(op line 26 & 27)
     if (mysqli_num_rows($results) >0) {
-      while ($row = $results->fetch_assoc()){
-        //$data[] = $row;
-        echo "<table>"$row['<td>''artist''<td>']." ".$row['title']." ".$row['id']."<br>" "</table>";
-      }
+    /*************
+      <table>
+      <tr>
+      <td>item</td>
+      </tr>
+      </table>
+    **********/
+      echo "<table>".PHP_EOL;
+          while ($row = $results->fetch_assoc()){
+            echo "<tr><td>{$row['artist']}</td><td>{$row['title']}</td><td>{$row['id']}</td></td></tr>".PHP_EOL;
+          }
+      echo "</table>".PHP_EOL;
+
       //shows results
       echo 'Total of results is: ' . $results->num_rows;
       //shows updates
