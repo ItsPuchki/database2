@@ -21,7 +21,7 @@
 
     <?php
     include_once 'connect.php' ;
-    //selecteerd van tabel songs
+    //selecteert van tabel songs
     $sql = 'SELECT * FROM `songs`';
     $results = $conn->query($sql);
     //pakt een record en maakt er een associatief array van(op line 26 & 27)
@@ -33,9 +33,13 @@
       </tr>
       </table>
     **********/
-      echo <div class="results">"<table>".PHP_EOL;
+
+      echo "<table class = 'result'>".PHP_EOL;
+      echo "<th>Artist</th>";
+      echo "<th>Title</th>";
+      echo "<th>ID</th>";
           while ($row = $results->fetch_assoc()){
-            echo "<tr><td>{$row['artist']}</td><td>{$row['title']}</td><td>{$row['id']}</td></td></tr>".PHP_EOL;
+            echo "<tr><td>{$row['artist']}</td><td>{$row['title']}</td><td>{$row['id']}</td></tr>".PHP_EOL;
           }
       echo "</table>".PHP_EOL;
 

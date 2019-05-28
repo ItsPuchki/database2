@@ -3,7 +3,10 @@ body {
   background-color: black;
 }
 
-div.results {
-  text-align: center;
-  
+th {
+  padding-left: 310px;
+}
+
+td {
+  padding-left: 350px;
 }
