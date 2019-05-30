@@ -47,6 +47,8 @@
       echo '<br><br><br>Total of results is: ' . $results->num_rows;
       //shows updates
       echo "<br><br>".'Total of rows updated: ' . $conn->affected_rows;
+      $conn->close();
+
     }
 
     ?>
