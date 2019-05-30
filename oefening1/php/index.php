@@ -34,7 +34,7 @@
       </table>
     **********/
 
-      echo "<table class = 'result'>".PHP_EOL;
+      echo "<br><br><br><table class = 'result'>".PHP_EOL;
       echo "<th>Artist</th>";
       echo "<th>Title</th>";
       echo "<th>ID</th>";
@@ -44,9 +44,9 @@
       echo "</table>".PHP_EOL;
 
       //shows results
-      echo 'Total of results is: ' . $results->num_rows;
+      echo '<br><br><br>Total of results is: ' . $results->num_rows;
       //shows updates
-      echo "<br>".'Total of rows updated: ' . $conn->affected_rows;
+      echo "<br><br>".'Total of rows updated: ' . $conn->affected_rows;
     }
 
     ?>

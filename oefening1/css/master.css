@@ -1,12 +1,15 @@
 body {
   color: white;
   background-color: black;
+  margin-left: 220px;
 }
 
 th {
-  padding-left: 310px;
+  border-style: solid;
+  padding-right: 175px;
+  padding-left: 150px;
 }
 
 td {
-  padding-left: 350px;
+  padding-top: 10px;
 }
