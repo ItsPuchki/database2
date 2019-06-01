@@ -1,0 +1,15 @@
+body {
+  color: white;
+  background-color: black;
+  margin-left: 220px;
+}
+
+th {
+  border-style: solid;
+  padding-right: 175px;
+  padding-left: 150px;
+}
+
+td {
+  padding-top: 10px;
+}
