@@ -48,7 +48,6 @@
       //shows updates
       echo "<br><br>".'Total of rows updated: ' . $conn->affected_rows;
       $conn->close();
-
     }
 
     ?>
