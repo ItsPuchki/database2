@@ -8,6 +8,26 @@
 </head>
 
 <body>
+  <?php
+  //zorgt voor verbinding
+  include_once 'connect.php' ;
+
+  if (isset($_POST['submit'])) {
+    $artist=$_POST['artist'];
+    $title=$_POST['title'];
+    $query ="INSERT into songs (artist,title)
+            values ('$artist','$title')";
+
+    if ( $conn->query($query)) {
+      echo "data is inserted";
+    }
+    else
+    {
+      echo mysqli_error($conn);
+    }
+    }
+
+  ?>
   <h1>Register the artist below</h1>
     <form class="" action="create.php" method="post" autocomplete="off">
       <p>Artist</p>
@@ -18,9 +38,7 @@
     </form>
     <br>
     <br>
-
     <?php
-    include_once 'connect.php' ;
     //selecteert van tabel songs
     $sql = 'SELECT * FROM `songs`';
     $results = $conn->query($sql);
