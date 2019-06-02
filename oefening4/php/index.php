@@ -8,12 +8,14 @@
 </head>
 
 <body>
+
   <?php
   //zorgt voor verbinding
-  include_once 'connect.php' ;
+  include_once 'connect.php';
+  //zorgt voor insert data
   include 'create.php';
-
   ?>
+
   <h1>Register the artist below</h1>
     <form class="" method="post" autocomplete="off">
       <p>Artist</p>
@@ -24,19 +26,13 @@
     </form>
     <br>
     <br>
+
     <?php
     //selecteert van tabel songs
     $sql = 'SELECT * FROM `songs`';
     $results = $conn->query($sql);
     //pakt een record en maakt er een associatief array van(op line 26 & 27)
     if (mysqli_num_rows($results) >0) {
-    /*************
-      <table>
-      <tr>
-      <td>item</td>
-      </tr>
-      </table>
-    **********/
 
       echo "<br><br><br><table class = 'result'>".PHP_EOL;
       echo "<th>Artist</th>";
@@ -53,7 +49,7 @@
       echo "<br><br>".'Total of rows updated: ' . $conn->affected_rows;
       $conn->close();
     }
-
     ?>
+
 </body>
 </html>
