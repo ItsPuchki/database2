@@ -5,6 +5,6 @@ $pass = 'j2wsG9Sj6GBRurN';
 $databasename = 'db_level2_opdr1';
 
 //Check connection
-$conn = new mysqli_connect('localhost', $user, $pass, $databasename) or die("Unable to connect");
+$conn = new mysqli('localhost', $user, $pass, $databasename) or die("Unable to connect");
 
 ?>
