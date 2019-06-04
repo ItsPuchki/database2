@@ -51,9 +51,9 @@
           $bday = new DateTime($row['birth']); // Your date of birth;
           $today = new Datetime(date('m.d.y'));
           $diff = $today->diff($bday);
-          echo "<td>";
+          echo "<tr><td>";
           printf(' %d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
-          echo "</td>";
+          echo "</td></tr>";
 
 }
 
