@@ -44,15 +44,18 @@
 
           while ($row = $results->fetch_assoc()){
             echo "<tr><td>{$row['name']}</td><td>{$row['last']}</td><td>{$row['birth']}</td><td>{$row['id']}</td>";
-          }
+
 
 
           //de berekening voor hoeveelheid dagen/maanden/jaren oud
-          $interval = date_diff(date_create(), date_create('birth'));
-          echo $interval->format("You are  %Y Year, %M Months, %d Days, %H Hours, %i Minutes, %s Seconds Old");
+          $bday = new DateTime($row['birth']); // Your date of birth;
+          $today = new Datetime(date('m.d.y'));
+          $diff = $today->diff($bday);
+          echo "<td>";
+          printf(' %d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
+          echo "</td>";
 
-
-
+}
 
       echo "</table>".PHP_EOL;
 
