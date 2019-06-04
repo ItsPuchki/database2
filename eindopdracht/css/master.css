@@ -1,0 +1,14 @@
+body {
+  color: white;
+  background-color: black;
+}
+
+th {
+  border-style: solid;
+  padding-right: 175px;
+  padding-left: 150px;
+}
+
+td {
+  padding-top: 10px;
+}

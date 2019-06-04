@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="css/master.css">
   <meta charset="utf-8">
   <title>Verjaardag</title>
 </head>
@@ -18,7 +18,7 @@
       <p>Lastname</p>
       <input type="text" name="last" placeholder="lastname">
       <p>Birthdate</p>
-      <input type="text" name="birth" placeholder="date of birth">
+      <input type="text" name="birth" placeholder="Y-M-D">
       <input type="submit" name="submit" value="Add">
       <input type="submit" name="delete" value="delete">
       <input type="text" name="id" placeholder="id">
@@ -43,10 +43,18 @@
       echo "<th>ID</th>";
 
           while ($row = $results->fetch_assoc()){
-            echo "<tr><td>{$row['Name']}</td><td>{$row['Lastname']}</td><td>{$row['Birthdate']}</td><td>{$row['id']}</td>";
+            echo "<tr><td>{$row['name']}</td><td>{$row['last']}</td><td>{$row['birth']}</td><td>{$row['id']}</td>";
           }
-      echo "</table>".PHP_EOL;
 
+
+          //de berekening voor hoeveelheid dagen/maanden/jaren oud
+          $interval = date_diff(date_create(), date_create('birth'));
+          echo $interval->format("You are  %Y Year, %M Months, %d Days, %H Hours, %i Minutes, %s Seconds Old");
+
+
+
+
+      echo "</table>".PHP_EOL;
 
       //shows results
       echo '<br><br><br>Total of results is: ' . $results->num_rows;
